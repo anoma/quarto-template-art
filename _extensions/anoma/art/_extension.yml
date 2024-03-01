@@ -1,5 +1,5 @@
-title: Article Format Template
-author: Christophe Dervieux
+title: Anonoma Research Topics
+author: Heliax AG
 version: 0.1.0
 contributes:
   formats:
@@ -16,32 +16,71 @@ contributes:
           echo: false
     pdf:
       # define default configuration for the pdf version of your format
-      documentclass: aft
+      documentclass: art
+      fontsize: 10pt
+      papersize: a4
+      classoption: techreport,affiltop
+      twocolumn: true
       colorlinks: true
-      urlcolor: red
+      linkcolor: anoma
+      filecolor: anoma
+      urlcolor: anoma
+      citecolor: black
       fig-width: 6.5
       fig-height: 4.5
+      number-sections: true
       # This format use a bst file with natbib
-      biblio-style: te
+      #biblio-style: alpha
       cite-method: natbib
+      #natbiboptions: "numbers,merge"
       # Set this below (`biblio-config: false`) if your cls already load a bst file
       # biblio-config: false
+      metadata:
+        #received: YYYY-MM-DD
+        #revised: YYYY-MM-DD
+        #published: YYYY-MM-DD
+        # Supplementary space between title/abstract and text, if needed
+        #title-vadj: 0pt
       # Content to add in header that your format is using
       header-includes: |
+        \let\listoflistings\undefined
         \usepackage{orcidlink}
-        \definecolor{mypink}{RGB}{219, 48, 122}
+      template: template.tex
       template-partials:
         # Add here the partials your format is using
+        - "partials/tables.tex"
+        - "partials/doc-class.tex"
         - "partials/title.tex"
-        - "partials/_authors.tex"
+        - "partials/before-body.tex"
       format-resources:
         # Add here the resources required for the PDF rendering
-        - aft.cls
-        - te.bst
+        - tex/art.cls
+        - tex/anoma-logo.pdf
+        - tex/quiver.sty
     html:
       # define default configuration for the html version of your format
       number-sections: true
+      anchor-sections: true
       toc: true
+      toc-depth: 5
+      linkcolor: "#AE3133"
+      fontsize: 1.2rem
+      mainfont:
+        - "TeX Gyre Pagella"
+        - "Palatino"
+        - "Palatino Linotype"
+        - "Palatino LT STD"
+        - "Book Antiqua"
+        - "Georgia"
+        - "serif"
+      monofont:
+        - "Consolas"
+        - "Liberation Mono"
+        - "Menlo"
+        - "Courier"
+        - "monospace"
       theme: custom.scss
       # Use a CSL file to style (https://www.zotero.org/styles/)
-      csl: https://www.zotero.org/styles/journal-of-institutional-and-theoretical-economics
+      #csl: https://www.zotero.org/styles/journal-of-institutional-and-theoretical-economics
+      #csl: csl/association-for-computing-machinery.csl
+      csl: csl/din-1505-2-alphanumeric.csl

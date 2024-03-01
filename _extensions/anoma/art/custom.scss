@@ -1,7 +1,15 @@
 /*-- scss:defaults --*/
-$pink: rgb(219, 48, 122);
+$anoma: #AE3133;
+$code-color: $anoma;
 
 /*-- scss:rules --*/
-.color-mypink {
-  color: $pink;
+.color-anoma {
+  color: $anoma;
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a.active,
+.sidebar nav[role="doc-toc"] ul > li > a:hover,
+.sidebar nav[role="doc-toc"] ul > li > ul > li > a.active,
+.sidebar nav[role="doc-toc"] ul > li > ul > li > a:hover {
+  color: $anoma !important;
 }

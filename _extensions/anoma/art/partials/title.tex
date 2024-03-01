@@ -18,5 +18,41 @@ $if(subtitle)$
 \makeatother
 \subtitle{$subtitle$}
 $endif$
-\author{${ by-author:_authors.tex()[\and ] }}
+
+\newcommand{\dg}{\textsuperscript{\textbf{\dag\textnormal{,}}}}
+
+$-- $\author{${ by-author:_authors.tex()[\and ] }}
+
+$for(by-author)$
+  \author[$for(it.affiliations/first)$$it.id$$endfor$$for(it.affiliations/rest)$,$it.id$$endfor$]
+  {$it.name.literal$$if(it.orcid)$~\protect\orcid{$it.orcid$}$endif$$if(it.metadata.eqcontrib)$\dg$endif$}
+$endfor$
+
+$for(by-author)$
+  $if(it.metadata.eqcontrib)$\equalcontrib{}$endif$
+$endfor$
+
+\contact{
+$for(by-author/first)$$it.email$$endfor$$for(by-author/rest)$, $it.email$$endfor$
+}
+$for(affiliations)$
+\affil[$it.id$]{$it.name$}
+$endfor$
+
+
+\begin{abstract}
+$abstract$
+\end{abstract}
+
+\keywords{$for(keywords/first)$$it$$endfor$$for(keywords/rest)$, $it$$endfor$}
+
+\history {$if(received)$Received $received$; $endif$$if(revised)$Revised $revised$; $endif$$if(published)$Published: $published$$else$$if(date)$Published: $date$$endif$$endif$)}
+
+\pubdoi{$doi$}
+\pubdate{$date$}
 \date{$date$}
+
+% Supplementary space between title/abstract and text, if needed
+$if(title-vadj)$
+\verticaladjustment{$title-vadj$}
+$endif$
