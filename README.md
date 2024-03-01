@@ -1,6 +1,6 @@
-# Anoma Reasearch Topics Template (ART)
+# Anoma Research Topics (ART) Quarto Template
 
-This is a Quarto template that assists you in creating a manuscript for [Anoma Research Topics](https://art.anoma.net).
+This is a [Quarto](https://quarto.org) template that assists you in creating a manuscript for [Anoma Research Topics](https://art.anoma.net).
 
 ## Creating a New Article
 
