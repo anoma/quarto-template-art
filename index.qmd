@@ -1,7 +1,9 @@
 ---
 keep-tex: true
-format:
-  art-html: default
+
+# Set formats for single file when not using project profiles defined in _quarto*.yml
+#format:
+#  art-html: default
 #  art-pdf: default
 
 # LaTeX options
