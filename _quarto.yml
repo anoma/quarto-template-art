@@ -1,3 +1,7 @@
+# DEFAULT PROJECT PROFILE
+#
+# Add local config to _quarto.yml.local
+
 project:
   output-dir: _output
   render:
@@ -10,16 +14,11 @@ format:
 
 keep-tex: true
 
-### LOCAL CONFIGURATION
-#
-# Add these to _quarto.yml.local
-# DO NOT enable it in this file.
 
-# Select PDF engine:
+# PDF engine
 
-#pdf-engine: latexmk
 #pdf-engine: xelatex
-#pdf-engine-opt: -shell-escape
+pdf-engine-opt: -shell-escape
 
-# disable tinytex if already installed
+# Disable tinytex if already installed
 #latex-tinytex: false
