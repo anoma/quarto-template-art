@@ -1,12 +1,13 @@
 ---
 title: "Demo ART format to use as template"
 format:
+  art-html: default
   art-pdf:
     keep-tex: true
-  art-html: default
 #classoption: techreport,affiltop
 #twocolumn: false
 #fontsize: 11pt
+#biblio-style: alpha
 author:
   - name: John Doe
     affiliations:
@@ -531,6 +532,14 @@ Your figures should contain a caption which describes the figure to
 the reader.
 
 Figure captions are placed _below_ the figure.
+
+Here's a page-width image:
+
+![1907 Franklin Model D roadster. Photograph by Harris \& Ewing, Inc. [Public domain], via Wikimedia Commons. (<https://goo.gl/VLCRBB>).](sample-franklin.png){#fig-dresses fig-alt="A woman and a girl in white dresses sit in an open car."  .column-page  width="100%" fig-env="figure*"}
+
+Here's a screen-width image:
+
+![1907 Franklin Model D roadster. Photograph by Harris \& Ewing, Inc. [Public domain], via Wikimedia Commons. (<https://goo.gl/VLCRBB>).](sample-franklin.png){#fig-dresses fig-alt="A woman and a girl in white dresses sit in an open car."  .column-screen-inset fig-env="figure*"}
 
 Every figure should also have a figure description unless it is purely
 decorative. These descriptions convey what’s in the image to someone
