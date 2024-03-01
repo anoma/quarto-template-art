@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.550">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="John Doe">
+<meta name="author" content="His Friend">
+<meta name="dcterms.date" content="2024-02-29">
+<meta name="keywords" content="template, demo">
+
+<title>Demo ART format to use as template</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link active" data-scroll-target="#sec-intro"><span class="header-section-number">1</span> Introduction</a>
+  <ul>
+  <li><a href="#about-quarto-extensions-formats-and-quarto-journals-article" id="toc-about-quarto-extensions-formats-and-quarto-journals-article" class="nav-link" data-scroll-target="#about-quarto-extensions-formats-and-quarto-journals-article"><span class="header-section-number">1.1</span> About Quarto Extensions formats And Quarto Journals Article</a></li>
+  <li><a href="#structure-of-this-repository" id="toc-structure-of-this-repository" class="nav-link" data-scroll-target="#structure-of-this-repository"><span class="header-section-number">1.2</span> Structure of this repository</a>
+  <ul>
+  <li><a href="#extensionsart" id="toc-extensionsart" class="nav-link" data-scroll-target="#extensionsart"><span class="header-section-number">1.2.1</span> <code>_extensions\art</code></a></li>
+  </ul></li>
+  <li><a href="#checklist-creating-a-custom-format" id="toc-checklist-creating-a-custom-format" class="nav-link" data-scroll-target="#checklist-creating-a-custom-format"><span class="header-section-number">1.3</span> Checklist: Creating a custom format</a></li>
+  <li><a href="#demo-of-some-features-found-in-this-demo-journal-template" id="toc-demo-of-some-features-found-in-this-demo-journal-template" class="nav-link" data-scroll-target="#demo-of-some-features-found-in-this-demo-journal-template"><span class="header-section-number">1.4</span> Demo of some features found in this demo journal template</a>
+  <ul>
+  <li><a href="#sec-shortcode" id="toc-sec-shortcode" class="nav-link" data-scroll-target="#sec-shortcode"><span class="header-section-number">1.4.1</span> Shortcode demo</a></li>
+  <li><a href="#sec-chunks" id="toc-sec-chunks" class="nav-link" data-scroll-target="#sec-chunks"><span class="header-section-number">1.4.2</span> Code chunk</a></li>
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link" data-scroll-target="#sec-summary"><span class="header-section-number">1.4.3</span> Text color</a>
+  <ul class="collapse">
+  <li><a href="#test-h4" id="toc-test-h4" class="nav-link" data-scroll-target="#test-h4"><span class="header-section-number">1.4.3.1</span> Test H4</a></li>
+  </ul></li>
+  <li><a href="#using-references" id="toc-using-references" class="nav-link" data-scroll-target="#using-references">Using references</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#acm-template" id="toc-acm-template" class="nav-link" data-scroll-target="#acm-template"><span class="header-section-number">2</span> ACM Template</a>
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2.1</span> Introduction</a></li>
+  <li><a href="#template-overview" id="toc-template-overview" class="nav-link" data-scroll-target="#template-overview"><span class="header-section-number">2.2</span> Template Overview</a>
+  <ul>
+  <li><a href="#template-styles" id="toc-template-styles" class="nav-link" data-scroll-target="#template-styles"><span class="header-section-number">2.2.1</span> Template Styles</a></li>
+  <li><a href="#template-parameters" id="toc-template-parameters" class="nav-link" data-scroll-target="#template-parameters"><span class="header-section-number">2.2.2</span> Template Parameters</a></li>
+  </ul></li>
+  <li><a href="#modifications" id="toc-modifications" class="nav-link" data-scroll-target="#modifications"><span class="header-section-number">2.3</span> Modifications</a></li>
+  <li><a href="#typefaces" id="toc-typefaces" class="nav-link" data-scroll-target="#typefaces"><span class="header-section-number">2.4</span> Typefaces</a></li>
+  <li><a href="#title-information" id="toc-title-information" class="nav-link" data-scroll-target="#title-information"><span class="header-section-number">2.5</span> Title Information</a></li>
+  <li><a href="#authors-and-affiliations" id="toc-authors-and-affiliations" class="nav-link" data-scroll-target="#authors-and-affiliations"><span class="header-section-number">2.6</span> Authors and Affiliations</a></li>
+  <li><a href="#rights-information" id="toc-rights-information" class="nav-link" data-scroll-target="#rights-information"><span class="header-section-number">2.7</span> Rights Information</a></li>
+  <li><a href="#ccs-concepts-and-user-defined-keywords" id="toc-ccs-concepts-and-user-defined-keywords" class="nav-link" data-scroll-target="#ccs-concepts-and-user-defined-keywords"><span class="header-section-number">2.8</span> CCS Concepts and User-Defined Keywords</a></li>
+  <li><a href="#sectioning-commands" id="toc-sectioning-commands" class="nav-link" data-scroll-target="#sectioning-commands"><span class="header-section-number">2.9</span> Sectioning Commands</a></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables"><span class="header-section-number">2.10</span> Tables</a></li>
+  <li><a href="#math-equations" id="toc-math-equations" class="nav-link" data-scroll-target="#math-equations"><span class="header-section-number">2.11</span> Math Equations</a>
+  <ul>
+  <li><a href="#inline-in-text-equations" id="toc-inline-in-text-equations" class="nav-link" data-scroll-target="#inline-in-text-equations"><span class="header-section-number">2.11.1</span> Inline (In-text) Equations</a></li>
+  <li><a href="#display-equations" id="toc-display-equations" class="nav-link" data-scroll-target="#display-equations"><span class="header-section-number">2.11.2</span> Display Equations</a></li>
+  </ul></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures"><span class="header-section-number">2.12</span> Figures</a>
+  <ul>
+  <li><a href="#the-teaser-figure" id="toc-the-teaser-figure" class="nav-link" data-scroll-target="#the-teaser-figure"><span class="header-section-number">2.12.1</span> The “Teaser Figure”</a></li>
+  </ul></li>
+  <li><a href="#citations-and-bibliographies" id="toc-citations-and-bibliographies" class="nav-link" data-scroll-target="#citations-and-bibliographies"><span class="header-section-number">2.13</span> Citations and Bibliographies</a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments"><span class="header-section-number">2.14</span> Acknowledgments</a></li>
+  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="header-section-number">2.15</span> Appendices</a></li>
+  <li><a href="#multi-language-papers" id="toc-multi-language-papers" class="nav-link" data-scroll-target="#multi-language-papers"><span class="header-section-number">2.16</span> Multi-language papers</a></li>
+  <li><a href="#sigchi-extended-abstracts" id="toc-sigchi-extended-abstracts" class="nav-link" data-scroll-target="#sigchi-extended-abstracts"><span class="header-section-number">2.17</span> SIGCHI Extended Abstracts</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a></li>
+  <li><a href="#research-methods" id="toc-research-methods" class="nav-link" data-scroll-target="#research-methods"><span class="header-section-number">3</span> Research Methods</a>
+  <ul>
+  <li><a href="#part-one" id="toc-part-one" class="nav-link" data-scroll-target="#part-one"><span class="header-section-number">3.1</span> Part One</a></li>
+  <li><a href="#part-two" id="toc-part-two" class="nav-link" data-scroll-target="#part-two"><span class="header-section-number">3.2</span> Part Two</a></li>
+  </ul></li>
+  <li><a href="#online-resources" id="toc-online-resources" class="nav-link" data-scroll-target="#online-resources"><span class="header-section-number">4</span> Online Resources</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Demo ART format to use as template</h1>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">John Doe <a href="mailto:JD@example.org" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Some Affiliation
+          </p>
+        <p class="affiliation">
+            Another Affiliation
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">His Friend <a href="mailto:HF@example.org" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Another Affiliation
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 29, 2024</p>
+    </div>
+  </div>
+  
+    
+    <div>
+    <div class="quarto-title-meta-heading">Doi</div>
+    <div class="quarto-title-meta-contents">
+      <p class="doi">
+        <a href="https://doi.org/XXXXXXX.YXXXXXX">XXXXXXX.YXXXXXX</a>
+      </p>
+    </div>
+  </div>
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>This document is only a demo explaining how to use the template.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>template, demo</p>
+  </div>
+</div>
+
+</header>
+
+
+<section id="sec-intro" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>This is a dummy example only for the purpose to use this repo as a template starter for creating new formats. For this <code>article-format-template</code> we call our dummy article <code>art</code>.</p>
+<p>This quarto extension format supports PDF and HTML outputs. <code>quarto-journals</code> is aiming at porting existing <span class="math inline">\LaTeX</span> template from journals to be used with quarto. PDF format is what require the most work to fit the journals guideline, but Quarto offer a nice rendering for HTML output too. This demo format template only use basic HTML format without any customization for now.</p>
+<section id="about-quarto-extensions-formats-and-quarto-journals-article" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="about-quarto-extensions-formats-and-quarto-journals-article"><span class="header-section-number">1.1</span> About Quarto Extensions formats And Quarto Journals Article</h2>
+<p>First, please get familiar with the following resources:</p>
+<ul>
+<li><a href="https://quarto.org/docs/extensions/formats.html">Creating Formats</a> in Quarto as part of the <a href="https://quarto.org/docs/extensions/">Extensions</a> mechanism.</li>
+<li><a href="https://quarto.org/docs/journals/">Journals Articles</a> for Quarto.</li>
+</ul>
+</section>
+<section id="structure-of-this-repository" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="structure-of-this-repository"><span class="header-section-number">1.2</span> Structure of this repository</h2>
+<p>Everything for the extensions is in <code>_extensions</code>. See Quarto doc for details.</p>
+<ul>
+<li><p>In <code>partials</code>, you’ll find the <code>.tex</code> partials that can be used and should be removed or tweaked,s</p></li>
+<li><p>Your extension can make shortcodes and lua filters available. This document shows the effect of the one provided in the <code>art</code> format.</p></li>
+<li><p><code>art</code> format sets some defaults which are different from <code>pdf</code> or <code>html</code>, link setting links to URL in read inside PDF output.</p></li>
+</ul>
+<p>Source repository for this template format can found on <a href="https://github.com/quarto-journals/article-format-template">Github</a></p>
+<section id="extensionsart" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="extensionsart"><span class="header-section-number">1.2.1</span> <code>_extensions\art</code></h3>
+<p>In this folder you’ll find everything that defines the extensions which could be installed using <code>quarto install extension</code> or be part of the template when using <code>quarto use template</code></p>
+<dl>
+<dt>Format Metadata</dt>
+<dd>
+This is in <code>_extension.yml</code> is where all the metadata about the format are defined so that Quarto knows what to use. Adapt this file for you own template.
+</dd>
+<dt>Partials</dt>
+<dd>
+<p>In <code>partials</code>, there are the <code>.tex</code> files that will be used as Pandoc’s template. We provide here all the partials supported by Quarto and custom one for this format. Quarto allows to provide partials to ease the process of tweaking the default latex Pandoc’s template and keeping it up to date. This template repo contains all the relevant partials that you can use with Quarto <em>as example</em>. We only tweaked <code>title.tex</code> to show the usage of a custom partials called <code>_custom.tex</code>. <strong>Only keep the partials that you need to tweak for the format you are creating</strong></p>
+<p>If you need to completely change the default template (i.g customizing partials is not enough), then you need to provide your own template to Pandoc based on <a href="https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/pdf/pandoc/template.tex"><code>template.tex</code></a> and also using partials or not. This can be provided using the <code>template</code> YAML key in <code>_extension.yml</code> for Quarto to use it.</p>
+<p>This is considered advanced configuration as it will be harder to maintain than only using partials but could be required for some specific format. Be aware that this may lead to loose some Pandoc or Quarto features tied to default <code>template.tex</code> content if you remove some specific parts.</p>
+</dd>
+<dt>Lua Filters</dt>
+<dd>
+<p>Most of the time, custom formats will need Lua filters to provide specific features like cross format supports or provides custom shortcodes through the Quarto extension mechanism. Those filters will be available to the user and could be used in the custom formats (according to <code>_extensions</code> metadata). We have provided two examples:</p>
+<ul>
+<li><code>color-text.lua</code>, a Lua filter used to add color to inline text for PDF and HTML outputs using the same Markdown syntax</li>
+<li><code>shorcodes.lua</code>, a Lua filter which follow <a href="https://quarto.org/docs/authoring/shortcodes.html#custom-shortcodes">Quarto custom shortcodes</a> guidelines to provide a <code>{{&lt; LaTeX  &gt;}}</code> shortcode to nicely print LaTeX in PDF and HTML.</li>
+</ul>
+<p><strong>Remove or replace with your own Lua filters</strong></p>
+</dd>
+<dt>Format resources</dt>
+<dd>
+<p>Resources required by the format needs to be available. We have provided two examples:</p>
+<ul>
+<li><code>te.bst</code> is a biblio style file for demo. It has been downloaded from https://www.economics.utoronto.ca/osborne/latex/TEBST.HTM (http://econtheory.org/technical/te.bst) - Licence <a href="https://www.latex-project.org/lppl/">LPPL</a></li>
+<li><code>art.cls</code> is a dummy class file for this example format. It is a copy of official <code>article.cls</code>, the one provided in LaTeX installation (i.e at <code>kpsewhich article.cls</code>) and renamed as example (Licence LaTeX Project Public License)</li>
+<li><code>custom.scss</code> is a style file to have a custom theme for our HTML format so that our Lua filter feature <code>color-tex.lua</code> works.</li>
+</ul>
+<p>Those files are referenced within the <code>_extension.yml</code> to be used with our example format.</p>
+<p><strong>Remove and replace with your own resources</strong></p>
+</dd>
+<dt><code>.quartoignore</code></dt>
+<dd>
+<p>Sometimes it is useful to have some files only needed for reference or for development. They should be available in the source repository but not downloaded to the user when <code>quarto use template</code> is used.</p>
+<p><strong>Use <code>.quartoignore</code> to register such file and folder (one file or folder per line)</strong></p>
+</dd>
+<dt><code>style-guide</code> folder</dt>
+<dd>
+<p>For <code>quarto-journals</code> format, use <code>style-guide</code> folder to include any documentation and resourced used for format creation, like a journal style guide or original <code>.tex</code> template. This folder is already added in <code>.quartoignore</code> in this example repo.</p>
+<p><strong>Remove, rename or add to this folder</strong></p>
+</dd>
+<dt><code>template.qmd</code></dt>
+<dd>
+<p>This file is the template document that shows how to use the custom format. It will be downloaded with other resource by <code>quarto use template</code>, and even offered to be renamed if the name <code>template.qmd</code> is used.</p>
+<p>This file will usually use the custom format (here <code>art-pdf</code> and <code>art-html</code>) and show how to use the template. When you’ll copy this template, you should be able to render this document to the demo format.</p>
+<p><strong>Adapt this file to provide a suitable template for your custom format</strong></p>
+</dd>
+<dt>Other files</dt>
+<dd>
+<p>Other files are needed by the template and are usually user provided - they are not part of the custom format.</p>
+<p>Here <code>bibliography.bib</code> is here to demo the usage of the bst file from the custom format.</p>
+<p><strong>Remove this file and provide a suitable one for your template</strong></p>
+</dd>
+</dl>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="checklist-creating-a-custom-format" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="checklist-creating-a-custom-format"><span class="header-section-number">1.3</span> Checklist: Creating a custom format</h2>
+<p>Here is the checklist to help you know what to modify:</p>
+<ul>
+<li>Read the resources mentioned at the top,</li>
+<li>Use this template repo to create a new repository for your format (Click on “Use this template” to create new github repo)</li>
+<li>Once you are acquainted with the content, remove the resources that are there only as example (see above)</li>
+<li>Update README by replacing <code>art</code> and <code>Article Format Template</code> mentions for your journal format</li>
+<li>Keep only the template partials that you need to tweak, and add custom ones if needed</li>
+<li>Add any Lua filters for shortcodes and other that would be useful to create the expected output format</li>
+<li>Add any external resource your format will need, and that should be part of the extension format that will be downloaded,</li>
+<li>Check <code>_extension.yml</code> is updated correctly</li>
+<li>Modify the skeleton <code>template.qmd</code> to your format and add any required resources to be downloaded to user.</li>
+<li>Check <code>.quartoignore</code> is updated which everything that should not be downloaded.</li>
+<li>Publish a demo of you format to github pages of the repo by using <code>quarto publish</code> command</li>
+</ul>
+</section>
+<section id="demo-of-some-features-found-in-this-demo-journal-template" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="demo-of-some-features-found-in-this-demo-journal-template"><span class="header-section-number">1.4</span> Demo of some features found in this demo journal template</h2>
+<section id="sec-shortcode" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="sec-shortcode"><span class="header-section-number">1.4.1</span> Shortcode demo</h3>
+<p>PDF are rendered using <span class="math inline">\LaTeX</span> but it is best if one can use a Markdown syntax for cross format support.</p>
+<p><code>\LaTeX</code> used in source is a shortcode syntax where the shortcode is included in the extension folder <code>_extensions</code></p>
+</section>
+<section id="sec-chunks" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="sec-chunks"><span class="header-section-number">1.4.2</span> Code chunk</h3>
+<p>This format hide chunks by default as option has been set in <code>_extension.yml</code> file.</p>
+<p>But you can set <code>echo</code> option to <code>true</code> locally in the chunk</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>m_pois <span class="ot">&lt;-</span> <span class="fu">glm</span>(Days <span class="sc">~</span> (Eth <span class="sc">+</span> Sex <span class="sc">+</span> Age <span class="sc">+</span> Lrn)<span class="sc">^</span><span class="dv">2</span>, <span class="at">data =</span> quine, <span class="at">family =</span> poisson)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_pois)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = Days ~ (Eth + Sex + Age + Lrn)^2, family = poisson, 
+    data = quine)
+
+Coefficients: (1 not defined because of singularities)
+            Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)  2.93246    0.09826  29.843  &lt; 2e-16 ***
+EthN        -0.17399    0.12134  -1.434   0.1516    
+SexM        -0.71452    0.12229  -5.843 5.14e-09 ***
+AgeF1       -0.04270    0.12691  -0.336   0.7365    
+AgeF2       -0.08632    0.16164  -0.534   0.5933    
+AgeF3       -0.15290    0.11898  -1.285   0.1987    
+LrnSL        0.21608    0.14558   1.484   0.1377    
+EthN:SexM    0.43902    0.09208   4.768 1.86e-06 ***
+EthN:AgeF1  -0.92889    0.14657  -6.337 2.34e-10 ***
+EthN:AgeF2  -1.33398    0.13504  -9.879  &lt; 2e-16 ***
+EthN:AgeF3  -0.11242    0.13478  -0.834   0.4042    
+EthN:LrnSL   0.26415    0.11378   2.322   0.0203 *  
+SexM:AgeF1  -0.05565    0.16303  -0.341   0.7328    
+SexM:AgeF2   1.09942    0.15281   7.195 6.26e-13 ***
+SexM:AgeF3   1.15949    0.13859   8.366  &lt; 2e-16 ***
+SexM:LrnSL   0.04143    0.13718   0.302   0.7627    
+AgeF1:LrnSL -0.13019    0.15688  -0.830   0.4066    
+AgeF2:LrnSL  0.37340    0.14563   2.564   0.0103 *  
+AgeF3:LrnSL       NA         NA      NA       NA    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 2073.5  on 145  degrees of freedom
+Residual deviance: 1368.7  on 128  degrees of freedom
+AIC: 1993.1
+
+Number of Fisher Scoring iterations: 5</code></pre>
+</div>
+</div>
+</section>
+<section id="sec-summary" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="sec-summary"><span class="header-section-number">1.4.3</span> Text color</h3>
+<p>Our format makes applying color on inline text possible using the <code>[content]{color=&lt;name&gt;}</code> syntax. Let’s see an example.</p>
+<p>Here we are using a special feature of our format which is the coloring because <span class="color-anoma">red is a <strong>nice</strong> color</span>.</p>
+<p>This is possible thanks to the Lua Filter included in the custom extension format.</p>
+<section id="test-h4" class="level4" data-number="1.4.3.1">
+<h4 data-number="1.4.3.1" class="anchored" data-anchor-id="test-h4"><span class="header-section-number">1.4.3.1</span> Test H4</h4>
+<p>Some text here</p>
+</section>
+</section>
+<section id="using-references" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="using-references">Using references</h3>
+<p>I did not read this paper <span class="citation" data-cites="juvix-to-vampir">[<a href="#ref-juvix-to-vampir" role="doc-biblioref">Czaj23</a>]</span> but it must be interesting.</p>
+<p>Differences between <code>art-html</code> and <code>art-pdf</code>:</p>
+<ul>
+<li>For the HTML format, we are using Pandoc citeproc to include the bibliography. Here <code>reference-section-title</code> controls the title for the chapter that will be used.</li>
+<li>For the PDF format, <code>natbib</code> is used by default and the bibliography is included with a title by the LaTeX template.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="acm-template" class="level1 page-columns page-full" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> ACM Template</h1>
+<section id="introduction" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2.1</span> Introduction</h2>
+<p>ACM’s consolidated article template, introduced in 2017, provides a consistent &nbsp;style for use across ACM publications, and incorporates accessibility and metadata-extraction functionality necessary for future Digital Library endeavors. Numerous ACM and SIG-specific &nbsp;templates have been examined, and their unique features incorporated into this single new template.</p>
+<p>If you are new to publishing with ACM, this document is a valuable guide to the process of preparing your work for publication. If you have published with ACM before, this document provides insight and instruction into more recent changes to the article template.</p>
+<p>The “<code>acmart</code>” document class can be used to prepare articles for any ACM publication — conference or journal, and for any stage of publication, from review to final “camera-ready” copy, to the author’s own version, with <em>very</em> few changes to the source.</p>
+</section>
+<section id="template-overview" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="template-overview"><span class="header-section-number">2.2</span> Template Overview</h2>
+<p>As noted in the introduction, the “<code>acmart</code>” document class can be used to prepare many different kinds of documentation — a double-blind initial submission of a full-length technical paper, a two-page SIGGRAPH Emerging Technologies abstract, a “camera-ready” journal article, a SIGCHI Extended Abstract, and more — all by selecting the appropriate <em>template style</em> and <em>template parameters</em>.</p>
+<p>This document will explain the major features of the document class. For further information, the <em>&nbsp;User’s Guide</em> is available from <a href="https://www.acm.org/publications/proceedings-template" class="uri">https://www.acm.org/publications/proceedings-template</a>.</p>
+<section id="template-styles" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="template-styles"><span class="header-section-number">2.2.1</span> Template Styles</h3>
+<p>The primary parameter given to the “<code>acmart</code>” document class is the <em>template style</em> which corresponds to the kind of publication or SIG publishing the work. This parameter is enclosed in square brackets and is a part of the “<code>documentclass</code>” command:</p>
+<pre><code>  \documentclass[STYLE]{acmart}</code></pre>
+<p>Journals use one of three template styles. All but three ACM journals use the “<code>acmsmall</code>” template style:</p>
+<ul>
+<li><code>acmsmall</code>: The default journal template style.</li>
+<li><code>acmlarge</code>: Used by JOCCH and TAP.</li>
+<li><code>acmtog</code>: Used by TOG.</li>
+</ul>
+<p>The majority of conference proceedings documentation will use the “<code>cmconf</code>” template style.</p>
+<ul>
+<li><code>acmconf</code>: The default proceedings template style.</li>
+<li><code>sigchi</code>: Used for SIGCHI conference articles.</li>
+<li><code>sigchi-a</code>: Used for SIGCHI “Extended Abstract” articles.</li>
+<li><code>sigplan</code>: Used for SIGPLAN conference articles.</li>
+</ul>
+</section>
+<section id="template-parameters" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="template-parameters"><span class="header-section-number">2.2.2</span> Template Parameters</h3>
+<p>In addition to specifying the <em>template style</em> to be used in formatting your work, there are a number of <em>template parameters</em> which modify some part of the applied template style. A complete list of these parameters can be found in the <em>&nbsp;User’s Guide.</em></p>
+<p>Frequently-used parameters, or combinations of parameters, include:</p>
+<ul>
+<li><code>anonymous,review</code>: Suitable for a “double-blind” conference submission. Anonymizes the work and includes line numbers. Use with the <code>\acmSubmissionID</code> command to print the submission’s unique ID on each page of the work.</li>
+<li><code>authorversion</code>: Produces a version of the work suitable for posting by the author.</li>
+<li><code>screen</code>: Produces colored hyperlinks.</li>
+</ul>
+<p>This document uses the following string as the first command in the source file:</p>
+<pre><code>  \documentclass[manuscript,screen,review]{acmart}</code></pre>
+</section>
+</section>
+<section id="modifications" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="modifications"><span class="header-section-number">2.3</span> Modifications</h2>
+<p>Modifying the template — including but not limited to: adjusting margins, typeface sizes, line spacing, paragraph and list definitions, and the use of the <code>\vspace</code> command to manually adjust the vertical spacing between elements of your work — is not allowed.</p>
+<p><strong>Your document will be returned to you for revision if modifications are discovered.</strong></p>
+</section>
+<section id="typefaces" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="typefaces"><span class="header-section-number">2.4</span> Typefaces</h2>
+<p>The “<code>acmart</code>” document class requires the use of the “Libertine” typeface family. Your &nbsp;installation should include this set of packages. Please do not substitute other typefaces. The “<code>lmodern</code>” and “<code>ltimes</code>” packages should not be used, as they will override the built-in typeface families.</p>
+</section>
+<section id="title-information" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="title-information"><span class="header-section-number">2.5</span> Title Information</h2>
+<p>The title of your work should use capital letters appropriately - <a href="https://capitalizemytitle.com/" class="uri">https://capitalizemytitle.com/</a> has useful rules for capitalization. Use the “<code>title</code>” command to define the title of your work. If your work has a subtitle, define it with the “<code>subtitle</code>” command. Do not insert line breaks in your title.</p>
+<p>If your title is lengthy, you must define a short version to be used in the page headers, to prevent overlapping text. The “<code>title</code>” command has a “short title” parameter:</p>
+<pre><code>  \title[short title]{full title}</code></pre>
+</section>
+<section id="authors-and-affiliations" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="authors-and-affiliations"><span class="header-section-number">2.6</span> Authors and Affiliations</h2>
+<p>Each author must be defined separately for accurate metadata identification. As an exception, multiple authors may share one affiliation. Authors’ names should not be abbreviated; use full first names wherever possible. Include authors’ e-mail addresses whenever possible.</p>
+<p>Grouping authors’ names or e-mail addresses, or providing an “e-mail alias,” as shown below, is not acceptable:</p>
+<pre><code>  \author{Brooke Aster, David Mehldau}
+  \email{dave,judy,steve@university.edu}
+  \email{firstname.lastname@phillips.org}</code></pre>
+<p>The <code>authornote</code> and <code>authornotemark</code> commands allow a note to apply to multiple authors — for example, if the first two authors of an article contributed equally to the work.</p>
+<p>If your author list is lengthy, you must define a shortened version of the list of authors to be used in the page headers, to prevent overlapping text. The following command should be placed just after the last <code>\author{}</code> definition:</p>
+<pre><code>  \renewcommand{\shortauthors}{McCartney, et al.}</code></pre>
+<p>Omitting this command will force the use of a concatenated list of all of the authors’ names, which may result in overlapping text in the page headers.</p>
+<p>The article template’s documentation, available at <a href="https://www.acm.org/publications/proceedings-template" class="uri">https://www.acm.org/publications/proceedings-template</a>, has a complete explanation of these commands and tips for their effective use.</p>
+<p>Note that authors’ addresses are mandatory for journal articles.</p>
+</section>
+<section id="rights-information" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="rights-information"><span class="header-section-number">2.7</span> Rights Information</h2>
+<p>Authors of any work published by ACM will need to complete a rights form. Depending on the kind of work, and the rights management choice made by the author, this may be copyright transfer, permission, license, or an OA (open access) agreement.</p>
+<p>Regardless of the rights management choice, the author will receive a copy of the completed rights form once it has been submitted. This form contains &nbsp;commands that must be copied into the source document. When the document source is compiled, these commands and their parameters add formatted text to several areas of the final document:</p>
+<ul>
+<li>the “ACM Reference Format” text on the first page.</li>
+<li>the “rights management” text on the first page.</li>
+<li>the conference information in the page header(s).</li>
+</ul>
+<p>Rights information is unique to the work; if you are preparing several works for an event, make sure to use the correct set of commands with each of the works.</p>
+<p>The ACM Reference Format text is required for all articles over one page in length, and is optional for one-page articles (abstracts).</p>
+</section>
+<section id="ccs-concepts-and-user-defined-keywords" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="ccs-concepts-and-user-defined-keywords"><span class="header-section-number">2.8</span> CCS Concepts and User-Defined Keywords</h2>
+<p>Two elements of the “acmart” document class provide powerful taxonomic tools for you to help readers find your work in an online search.</p>
+<p>The ACM Computing Classification System — <a href="https://www.acm.org/publications/class-2012" class="uri">https://www.acm.org/publications/class-2012</a> — is a set of classifiers and concepts that describe the computing discipline. Authors can select entries from this classification system, via <a href="https://dl.acm.org/ccs/ccs.cfm" class="uri">https://dl.acm.org/ccs/ccs.cfm</a>, and generate the commands to be included in the &nbsp;source.</p>
+<p>User-defined keywords are a comma-separated list of words and phrases of the authors’ choosing, providing a more flexible way of describing the research being presented.</p>
+<p>CCS concepts and user-defined keywords are required for for all articles over two pages in length, and are optional for one- and two-page articles (or abstracts).</p>
+</section>
+<section id="sectioning-commands" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="sectioning-commands"><span class="header-section-number">2.9</span> Sectioning Commands</h2>
+<p>Your work should use standard &nbsp;sectioning commands: <code>section</code>, <code>subsection</code>, <code>subsubsection</code>, and <code>paragraph</code>. They should be numbered; do not remove the numbering from the commands.</p>
+<p>Simulating a sectioning command by setting the first word or words of a paragraph in boldface or italicized text is <strong>not allowed.</strong></p>
+</section>
+<section id="tables" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="tables"><span class="header-section-number">2.10</span> Tables</h2>
+<p>The “<code>acmart</code>” document class includes the “<code>booktabs</code>” package — <a href="https://ctan.org/pkg/booktabs" class="uri">https://ctan.org/pkg/booktabs</a> — for preparing high-quality tables.</p>
+<p>Table captions are placed <em>above</em> the table.</p>
+<p>Because tables cannot be split across pages, the best placement for them is typically the top of the page nearest their initial cite. To ensure this proper “floating” placement of tables, use the environment <strong>table</strong> to enclose the table’s contents and the table caption. The contents of the table itself must go in the <strong>tabular</strong> environment, to be aligned properly in rows and columns, with the desired horizontal and vertical rules. Again, detailed instructions on <strong>tabular</strong> material are found in the <em>&nbsp;User’s Guide</em>.</p>
+<p>Immediately following this sentence is the point at which <a href="#tbl-freq" class="quarto-xref">Table&nbsp;1</a> is included in the input file; compare the placement of the table here with the table in the printed output of this document.</p>
+<div id="tbl-freq" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-freq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Frequency of Special Characters
+</figcaption>
+<div aria-describedby="tbl-freq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Non-English or Math</th>
+<th style="text-align: center;">Frequency</th>
+<th style="text-align: left;">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Ø</td>
+<td style="text-align: center;">1 in 1,000</td>
+<td style="text-align: left;">For Swedish names</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\pi</span></td>
+<td style="text-align: center;">1 in 5</td>
+<td style="text-align: left;">Common in math</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">$</td>
+<td style="text-align: center;">4 in 5</td>
+<td style="text-align: left;">Used in business</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\Psi^2_1</span></td>
+<td style="text-align: center;">1 in 40,000</td>
+<td style="text-align: left;">Unexplained usage</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>To set a wider table, which takes up the whole width of the page’s live area, use the environment <strong>table*</strong> to enclose the table’s contents and the table caption. As with a single-column table, this wide table will “float” to a location deemed more desirable. Immediately following this sentence is the point at which <a href="#tbl-commands" class="quarto-xref">Table&nbsp;2</a> is included in the input file; again, it is instructive to compare the placement of the table here with the table in the printed output of this document.</p>
+<div id="tbl-commands" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-commands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Some Typical Commands
+</figcaption>
+<div aria-describedby="tbl-commands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Command</th>
+<th style="text-align: center;">A Number</th>
+<th style="text-align: left;">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>\author</code></td>
+<td style="text-align: center;">100</td>
+<td style="text-align: left;">Author</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>\table</code></td>
+<td style="text-align: center;">300</td>
+<td style="text-align: left;">For tables</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>\table*</code></td>
+<td style="text-align: center;">400</td>
+<td style="text-align: left;">For wider tables</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Always use midrule to separate table header rows from data rows, and use it only for this purpose. This enables assistive technologies to recognise table headers and support their users in navigating tables more easily.</p>
+</section>
+<section id="math-equations" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="math-equations"><span class="header-section-number">2.11</span> Math Equations</h2>
+<p>You may want to display math equations in three distinct styles: inline, numbered or non-numbered display. Each of the three are discussed in the next sections.</p>
+<section id="inline-in-text-equations" class="level3" data-number="2.11.1">
+<h3 data-number="2.11.1" class="anchored" data-anchor-id="inline-in-text-equations"><span class="header-section-number">2.11.1</span> Inline (In-text) Equations</h3>
+<p>A formula that appears in the running text is called an inline or in-text formula. It is produced by the <strong>math</strong> environment, which can be invoked with the usual <code>\begin, ... \end</code> construction or with the short form <code>\$ ... \$</code>. You can use any of the symbols and structures, from <span class="math inline">\alpha</span> to <span class="math inline">\omega</span>, available in <span class="citation" data-cites="Lamport:LaTeX">[<a href="#ref-Lamport:LaTeX" role="doc-biblioref"><strong>Lamport:LaTeX?</strong></a>]</span>; this section will simply show a few examples of in-text equations in context. Notice how this equation: <span class="math inline">\lim_{n\rightarrow \infty}x=0</span>, set here in in-line math style, looks slightly different when set in display style. (See next section).</p>
+</section>
+<section id="display-equations" class="level3" data-number="2.11.2">
+<h3 data-number="2.11.2" class="anchored" data-anchor-id="display-equations"><span class="header-section-number">2.11.2</span> Display Equations</h3>
+<p>A numbered display equation—one set off by vertical space from the text and centered horizontally—is produced by the environment. An unnumbered display equation is produced by the <strong>displaymath</strong> environment.</p>
+<p>Again, in either environment, you can use any of the symbols and structures available in @; this section will just give a couple of examples of display equations in context. First, consider <a href="#eq-oneequation" class="quarto-xref">Equation&nbsp;1</a>, shown as an inline equation above:</p>
+<p><span id="eq-oneequation"><span class="math display">
+\lim_{n\rightarrow \infty}x=0
+\tag{1}</span></span></p>
+<p>Notice how it is formatted somewhat differently in the <strong>displaymath</strong> environment. Now, we’ll enter an unnumbered equation:</p>
+<p><span class="math display">\sum_{i=0}^{\infty} x + 1</span></p>
+<p>and follow it with <a href="#eq-anotherequation" class="quarto-xref">Equation&nbsp;2</a>, another numbered equation:</p>
+<p><span id="eq-anotherequation"><span class="math display">
+\sum_{i=0}^{\infty}x_i=\int_{0}^{\pi+2} f
+\tag{2}</span></span></p>
+<p>just to demonstrate ’s able handling of numbering.</p>
+</section>
+</section>
+<section id="figures" class="level2 page-columns page-full" data-number="2.12">
+<h2 data-number="2.12" class="anchored" data-anchor-id="figures"><span class="header-section-number">2.12</span> Figures</h2>
+<p>The “<code>figure</code>” environment should be used for figures. One or more images can be placed within a figure. If your figure contains third-party material, you must clearly identify it as such, as shown in the example below.</p>
+<div id="fig-dresses" class="quarto-figure quarto-figure-center quarto-float anchored" alt="A woman and a girl in white dresses sit in an open car.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dresses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="sample-franklin.png" class="img-fluid figure-img" alt="A woman and a girl in white dresses sit in an open car.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dresses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: 1907 Franklin Model D roadster. Photograph by Harris &amp; Ewing, Inc.&nbsp;[Public domain], via Wikimedia Commons. (<a href="https://goo.gl/VLCRBB" class="uri">https://goo.gl/VLCRBB</a>).
+</figcaption>
+</figure>
+</div>
+<p>Your figures should contain a caption which describes the figure to the reader.</p>
+<p>Figure captions are placed <em>below</em> the figure.</p>
+<p>Here’s a page-width image:</p>
+<div id="fig-dresses" class="quarto-figure quarto-figure-center quarto-float anchored page-columns page-full" alt="A woman and a girl in white dresses sit in an open car." data-fig-env="figure*">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-dresses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<img src="sample-franklin.png" class="img-fluid figure-img column-page" style="width:100.0%" data-fig-env="figure*" alt="A woman and a girl in white dresses sit in an open car.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dresses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: 1907 Franklin Model D roadster. Photograph by Harris &amp; Ewing, Inc.&nbsp;[Public domain], via Wikimedia Commons. (<a href="https://goo.gl/VLCRBB" class="uri">https://goo.gl/VLCRBB</a>).
+</figcaption>
+</figure>
+</div>
+<p>Here’s a screen-width image:</p>
+<div id="fig-dresses" class="quarto-figure quarto-figure-center quarto-float anchored page-columns page-full" alt="A woman and a girl in white dresses sit in an open car." data-fig-env="figure*">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-dresses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<img src="sample-franklin.png" class="img-fluid figure-img column-screen-inset" data-fig-env="figure*" alt="A woman and a girl in white dresses sit in an open car.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dresses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: 1907 Franklin Model D roadster. Photograph by Harris &amp; Ewing, Inc.&nbsp;[Public domain], via Wikimedia Commons. (<a href="https://goo.gl/VLCRBB" class="uri">https://goo.gl/VLCRBB</a>).
+</figcaption>
+</figure>
+</div>
+<p>Every figure should also have a figure description unless it is purely decorative. These descriptions convey what’s in the image to someone who cannot see it. They are also used by search engine crawlers for indexing images, and when images cannot be loaded.</p>
+<p>A figure description must be unformatted plain text less than 2000 characters long (including spaces). <strong>Figure descriptions should not repeat the figure caption – their purpose is to capture important information that is not already provided in the caption or the main text of the paper.</strong> For figures that convey important and complex new information, a short text description may not be adequate. More complex alternative descriptions can be placed in an appendix and referenced in a short figure description. For example, provide a data table capturing the information in a bar chart, or a structured list representing a graph. For additional information regarding how best to write figure descriptions and why doing this is so important, please see <a href="https://www.acm.org/publications/taps/describing-figures/" class="uri">https://www.acm.org/publications/taps/describing-figures/</a>.</p>
+<section id="the-teaser-figure" class="level3" data-number="2.12.1">
+<h3 data-number="2.12.1" class="anchored" data-anchor-id="the-teaser-figure"><span class="header-section-number">2.12.1</span> The “Teaser Figure”</h3>
+<p>A “teaser figure” is an image, or set of images in one figure, that are placed after all author and affiliation information, and before the body of the article, spanning the page. If you wish to have such a figure in your article, place the command immediately before the <code>\maketitle</code> command:</p>
+<pre><code>  \begin{teaserfigure}
+    \includegraphics[width=\textwidth]{sampleteaser}
+    \caption{figure caption}
+    \Description{figure description}
+  \end{teaserfigure}</code></pre>
+</section>
+</section>
+<section id="citations-and-bibliographies" class="level2" data-number="2.13">
+<h2 data-number="2.13" class="anchored" data-anchor-id="citations-and-bibliographies"><span class="header-section-number">2.13</span> Citations and Bibliographies</h2>
+<p>The use of BibTeX for the preparation and formatting of one’s references is strongly recommended. Authors’ names should be complete — use full first names (“Donald E. Knuth”) not initials (“D. E. Knuth”) — and the salient identifying features of a reference should be included: title, year, volume, number, pages, article DOI, etc.</p>
+<p>The bibliography is included in your source document with these two commands, placed just before the command:</p>
+<pre><code>  \bibliographystyle{ACM-Reference-Format}
+  \bibliography{bibfile}</code></pre>
+<p>where “<code>bibfile</code>” is the name, without the “<code>.bib</code>” suffix, of the BibTeX file.</p>
+<p>Citations and references are numbered by default. A small number of ACM publications have citations and references formatted in the “author year” style; for these exceptions, please include this command in the <strong>preamble</strong> (before the command “<code>\begin{document}</code>”) of your &nbsp;source:</p>
+<pre><code>  \citestyle{acmauthoryear}</code></pre>
+<p>Some examples. A paginated journal article <span class="citation" data-cites="Abril07">[<a href="#ref-Abril07" role="doc-biblioref"><strong>Abril07?</strong></a>]</span>, an enumerated journal article <span class="citation" data-cites="Cohen07">[<a href="#ref-Cohen07" role="doc-biblioref"><strong>Cohen07?</strong></a>]</span>, a reference to an entire issue <span class="citation" data-cites="JCohen96">[<a href="#ref-JCohen96" role="doc-biblioref"><strong>JCohen96?</strong></a>]</span>, a monograph (whole book) <span class="citation" data-cites="Kosiur01">[<a href="#ref-Kosiur01" role="doc-biblioref"><strong>Kosiur01?</strong></a>]</span>, a monograph/whole book in a series (see 2a in spec. document) <span class="citation" data-cites="Harel79">[<a href="#ref-Harel79" role="doc-biblioref"><strong>Harel79?</strong></a>]</span>, a divisible-book such as an anthology or compilation <span class="citation" data-cites="Editor00">[<a href="#ref-Editor00" role="doc-biblioref"><strong>Editor00?</strong></a>]</span> followed by the same example, however we only output the series if the volume number is given <span class="citation" data-cites="Editor00a">[<a href="#ref-Editor00a" role="doc-biblioref"><strong>Editor00a?</strong></a>]</span> (so Editor00a’s series should NOT be present since it has no vol.&nbsp;no.), a chapter in a divisible book <span class="citation" data-cites="Spector90">[<a href="#ref-Spector90" role="doc-biblioref"><strong>Spector90?</strong></a>]</span>, a chapter in a divisible book in a series <span class="citation" data-cites="Douglass98">[<a href="#ref-Douglass98" role="doc-biblioref"><strong>Douglass98?</strong></a>]</span>, a multi-volume work as book <span class="citation" data-cites="Knuth97">[<a href="#ref-Knuth97" role="doc-biblioref"><strong>Knuth97?</strong></a>]</span>, a couple of articles in a proceedings (of a conference, symposium, workshop for example) (paginated proceedings article) <span class="citation" data-cites="Andler79">[<a href="#ref-Hagerup1993" role="doc-biblioref"><strong>Hagerup1993?</strong></a>]</span>, a proceedings article with all possible elements <span class="citation" data-cites="Smith10">[<a href="#ref-Smith10" role="doc-biblioref"><strong>Smith10?</strong></a>]</span>, an example of an enumerated proceedings article <span class="citation" data-cites="VanGundy07">[<a href="#ref-VanGundy07" role="doc-biblioref"><strong>VanGundy07?</strong></a>]</span>, an informally published work <span class="citation" data-cites="Harel78">[<a href="#ref-Harel78" role="doc-biblioref"><strong>Harel78?</strong></a>]</span>, a couple of preprints <span class="citation" data-cites="Bornmann2019">[<a href="#ref-AnzarootPBM14" role="doc-biblioref"><strong>AnzarootPBM14?</strong></a>]</span>, a doctoral dissertation <span class="citation" data-cites="Clarkson85">[<a href="#ref-Clarkson85" role="doc-biblioref"><strong>Clarkson85?</strong></a>]</span>, a master’s thesis: <span class="citation" data-cites="anisi03">[<a href="#ref-anisi03" role="doc-biblioref"><strong>anisi03?</strong></a>]</span>, an online document / world wide web resource <span class="citation" data-cites="Thornburg01">[<a href="#ref-Poker06" role="doc-biblioref"><strong>Poker06?</strong></a>]</span>, a video game (Case 1) <span class="citation" data-cites="Obama08">[<a href="#ref-Obama08" role="doc-biblioref"><strong>Obama08?</strong></a>]</span> and (Case 2)<span class="citation" data-cites="Novak03">[<a href="#ref-Novak03" role="doc-biblioref"><strong>Novak03?</strong></a>]</span> and <span class="citation" data-cites="Lee05">[<a href="#ref-Lee05" role="doc-biblioref"><strong>Lee05?</strong></a>]</span> and (Case 3) a patent <span class="citation" data-cites="JoeScientist001">[<a href="#ref-JoeScientist001" role="doc-biblioref"><strong>JoeScientist001?</strong></a>]</span>, work accepted for publication <span class="citation" data-cites="rous08">[<a href="#ref-rous08" role="doc-biblioref"><strong>rous08?</strong></a>]</span>, ‘YYYYb’-test for prolific author <span class="citation" data-cites="SaeediMEJ10">[<a href="#ref-SaeediMEJ10" role="doc-biblioref"><strong>SaeediMEJ10?</strong></a>]</span> and <span class="citation" data-cites="SaeediJETC10">[<a href="#ref-SaeediJETC10" role="doc-biblioref"><strong>SaeediJETC10?</strong></a>]</span>. Other cites might contain ‘duplicate’ DOI and URLs (some SIAM articles) <span class="citation" data-cites="Kirschmer-2010-AEI-1958016-1958018">[<a href="#ref-Kirschmer-2010-AEI-1958016-1958018" role="doc-biblioref"><strong>Kirschmer-2010-AEI-1958016-1958018?</strong></a>]</span>. Boris / Barbara Beeton: multi-volume works as books <span class="citation" data-cites="MR781536">[<a href="#ref-MR781536" role="doc-biblioref"><strong>MR781536?</strong></a>]</span> and <span class="citation" data-cites="MR781537">[<a href="#ref-MR781537" role="doc-biblioref"><strong>MR781537?</strong></a>]</span>. A couple of citations with DOIs: <span class="citation" data-cites="2004-ITE-1009386-1010128">[<a href="#ref-Kirschmer-2010-AEI-1958016-1958018" role="doc-biblioref"><strong>Kirschmer-2010-AEI-1958016-1958018?</strong></a>]</span>. Online citations: <span class="citation" data-cites="TUGInstmem">[<a href="#ref-CTANacmart" role="doc-biblioref"><strong>CTANacmart?</strong></a>]</span>. Artifacts: <span class="citation" data-cites="R">[<a href="#ref-R" role="doc-biblioref"><strong>R?</strong></a>]</span> and <span class="citation" data-cites="UMassCitations">[<a href="#ref-UMassCitations" role="doc-biblioref"><strong>UMassCitations?</strong></a>]</span>.</p>
+</section>
+<section id="acknowledgments" class="level2" data-number="2.14">
+<h2 data-number="2.14" class="anchored" data-anchor-id="acknowledgments"><span class="header-section-number">2.14</span> Acknowledgments</h2>
+<p>Identification of funding sources and other support, and thanks to individuals and groups that assisted in the research and the preparation of the work should be included in an acknowledgment section, which is placed just before the reference section in your document.</p>
+<p>This section has a special environment:</p>
+<pre><code>  \begin{acks}
+  ...
+  \end{acks}</code></pre>
+<p>so that the information contained therein can be more easily collected during the article metadata extraction phase, and to ensure consistency in the spelling of the section heading.</p>
+<p>Authors should not prepare this section as a numbered or unnumbered <code>\section</code>; please the “<code>\acks</code>” environment.</p>
+</section>
+<section id="appendices" class="level2" data-number="2.15">
+<h2 data-number="2.15" class="anchored" data-anchor-id="appendices"><span class="header-section-number">2.15</span> Appendices</h2>
+<p>If your work needs an appendix, add it before the “<code>\end{document}</code>” command at the conclusion of your source document.</p>
+<p>Start the appendix with the “<code>appendix</code>” command:</p>
+<pre><code>  \appendix</code></pre>
+<p>and note that in the appendix, sections are lettered, not numbered. This document has two appendices, demonstrating the section and subsection identification method.</p>
+</section>
+<section id="multi-language-papers" class="level2" data-number="2.16">
+<h2 data-number="2.16" class="anchored" data-anchor-id="multi-language-papers"><span class="header-section-number">2.16</span> Multi-language papers</h2>
+<p>Papers may be written in languages other than English or include titles, subtitles, keywords and abstracts in different languages (as a rule, a paper in a language other than English should include an English title and an English abstract). Use <code>language=...</code> for every language used in the paper. The last language indicated is the main language of the paper. For example, a French paper with additional titles and abstracts in English and German may start with the following command</p>
+<pre><code>  \documentclass[sigconf, language=english, language=german,
+                 language=french]{acmart}</code></pre>
+<p>The title, subtitle, keywords and abstract will be typeset in the main language of the paper. The commands <code>\translatedXXX</code>, <code>XXX</code> being <code>title</code>, <code>subtitle</code> and <code>keywords</code>, can be used to set these elements in the other languages. The environment <code>translatedabstract</code> is used to set the translation of the abstract. These commands and environment have a mandatory first argument: the language of the second argument. See <code>sample-sigconf-i13n.tex</code> file for examples of their usage.</p>
+</section>
+<section id="sigchi-extended-abstracts" class="level2" data-number="2.17">
+<h2 data-number="2.17" class="anchored" data-anchor-id="sigchi-extended-abstracts"><span class="header-section-number">2.17</span> SIGCHI Extended Abstracts</h2>
+<p>The “<code>sigchi-a</code>” template style (available only in &nbsp;and not in Word) produces a landscape-orientation formatted article, with a wide left margin. Three environments are available for use with the “<code>sigchi-a</code>” template style, and produce formatted output in the margin:</p>
+<ul>
+<li><strong><code>sidebar</code></strong>: Place formatted text in the margin.</li>
+<li><strong><code>marginfigure</code></strong>: Place a figure in the margin.</li>
+<li><strong><code>margintable</code></strong>: Place a table in the margin.</li>
+</ul>
+<div class="acks">
+<p>To Robert, for the bagels and explaining CMYK and color spaces.</p>
+</div>
+</section>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-juvix-to-vampir" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[Czaj23] </div><div class="csl-right-inline"><span class="smallcaps">Czajka, Lukasz</span>: <a href="https://doi.org/10.5281/zenodo.8246535"><span class="nocase">Juvix to VampIR Pipeline</span></a>. In: <em><span>Anoma Research Topics</span></em>, Zenodo (2023). —&nbsp;<span>This document is based on Juvix v0.4.1, Geb v0.4.0, and VampIR v0.1.3.</span></div>
+</div>
+</div>
+</section>
+<section id="appendix" class="level1 unnumbered">
+<h1 class="unnumbered">Appendix</h1>
+</section>
+<section id="research-methods" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Research Methods</h1>
+<section id="part-one" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="part-one"><span class="header-section-number">3.1</span> Part One</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi malesuada, quam in pulvinar varius, metus nunc fermentum urna, id sollicitudin purus odio sit amet enim. Aliquam ullamcorper eu ipsum vel mollis. Curabitur quis dictum nisl. Phasellus vel semper risus, et lacinia dolor. Integer ultricies commodo sem nec semper.</p>
+</section>
+<section id="part-two" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="part-two"><span class="header-section-number">3.2</span> Part Two</h2>
+<p>Etiam commodo feugiat nisl pulvinar pellentesque. Etiam auctor sodales ligula, non varius nibh pulvinar semper. Suspendisse nec lectus non ipsum convallis congue hendrerit vitae sapien. Donec at laoreet eros. Vivamus non purus placerat, scelerisque diam eu, cursus ante. Etiam aliquam tortor auctor efficitur mattis.</p>
+</section>
+</section>
+<section id="online-resources" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Online Resources</h1>
+<p>Nam id fermentum dui. Suspendisse sagittis tortor a nulla mollis, in pulvinar ex pretium. Sed interdum orci quis metus euismod, et sagittis enim maximus. Vestibulum gravida massa ut felis suscipit congue. Quisque mattis elit a risus ultrices commodo venenatis eget dui. Etiam sagittis eleifend elementum.</p>
+<p>Nam interdum magna at lectus dignissim, ac dignissim lorem rhoncus. Maecenas eu arcu ac neque placerat aliquam. Nunc pulvinar massa et mattis lacinia.</p>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{doe2024,
+  author = {Doe, John and Friend, His},
+  title = {Demo {ART} Format to Use as Template},
+  journal = {Journal of Data Science Software},
+  date = {2024-02-29},
+  url = {https://example.com/summarizing-output},
+  doi = {XXXXXXX.YXXXXXX},
+  langid = {en},
+  abstract = {This document is only a demo explaining how to use the
+    template.}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-doe2024" class="csl-entry quarto-appendix-citeas" role="listitem">
+<div class=""><span class="smallcaps">Doe, John</span> ;
+<span class="smallcaps">Friend, His</span>: <a href="https://doi.org/XXXXXXX.YXXXXXX">Demo ART format to use as
+template</a>. In: <em>Journal of Data Science Software</em> (2024)</div>
+</div></div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
