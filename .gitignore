@@ -1,1 +1,6 @@
-.DS_Store
+.*
+\#*
+*.sw[nop]
+
+/.quarto/
+/_output/
