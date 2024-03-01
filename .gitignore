@@ -4,3 +4,5 @@
 
 /.quarto/
 /_output/
+
+/_*.local
