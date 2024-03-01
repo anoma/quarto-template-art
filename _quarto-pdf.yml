@@ -1,3 +1,2 @@
 format:
-  art-pdf:
-    keep-tex: true
+  art-pdf: default

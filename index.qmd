@@ -1,8 +1,8 @@
 ---
+keep-tex: true
 format:
   art-html: default
-#  art-pdf:
-#    keep-tex: true
+#  art-pdf: default
 
 # LaTeX options
 #classoption: techreport,affiltop

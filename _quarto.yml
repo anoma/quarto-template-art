@@ -8,6 +8,18 @@ project:
 format:
   art-html: default
 
+keep-tex: true
+
+### LOCAL CONFIGURATION
+#
+# Add these to _quarto.yml.local
+# DO NOT enable it in this file.
+
+# Select PDF engine:
+
 #pdf-engine: latexmk
 #pdf-engine: xelatex
-pdf-engine-opt: -shell-escape
+#pdf-engine-opt: -shell-escape
+
+# disable tinytex if already installed
+#latex-tinytex: false
