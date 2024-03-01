@@ -1,5 +1,6 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
+\PassOptionsToPackage{$natbiboptions$}{natbib}
 \PassOptionsToPackage{hyphens}{url}
 $if(colorlinks)$
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
@@ -67,6 +68,7 @@ $if(beamerarticle)$
 \usepackage{beamerarticle} % needs to be loaded first
 $endif$
 
+$if(font-config)$
 \usepackage{amsmath,amssymb}
 $if(linestretch)$
 \usepackage{setspace}
@@ -93,6 +95,7 @@ $if(fontfamily)$
 $else$
 $-- Set default font before Beamer theme so the theme can override it
 \usepackage{lmodern}
+$endif$
 $endif$
 $-- Set Beamer theme before user font settings so they can override theme
 $if(beamer)$
@@ -245,7 +248,7 @@ $if(CJKmainfont)$
   \usepackage{xeCJKfntef}
   \renewcommand{\st}[1]{\sout{#1}}
 \fi
-$endif$  
+$endif$
 \fi
 $endif$
 \setlength{\emergencystretch}{3em} % prevent overfull lines
@@ -311,7 +314,7 @@ $if(dir)$
 $endif$
 $if(biblio-config)$
 $if(natbib)$
-\usepackage[$natbiboptions$]{natbib}
+% \usepackage[$natbiboptions$]{natbib}
 \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
 $endif$
 $if(biblatex)$
@@ -368,10 +371,11 @@ $endif$
 $endif$
   pdfcreator={LaTeX via pandoc}}
 
-$before-title.tex()$
+$-- $$before-title.tex()$
 $title.tex()$
 
 \begin{document}
+
 $before-body.tex()$
 
 $for(include-before)$
