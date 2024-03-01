@@ -14,10 +14,20 @@ This will install the extension and create an example qmd file and bibiography t
 
 ## Installation For Existing Document
 
-You may also use this format with an existing Quarto project or document. From the quarto project or document directory, run the following command to install this format:
+You may also use this format with an existing Quarto project or document.
+From the quarto project or document directory, run the following command to install this format:
 
 ```bash
 quarto add anoma/quarto-template-art
+```
+
+## Updating the Template
+
+After having installed the template using one of the methods above,
+you can update it to the latest version the following way:
+
+```bash
+quarto update anoma/quarto-template-art
 ```
 
 ## Usage
