@@ -1,13 +1,17 @@
 ---
-title: "Demo ART format to use as template"
 format:
   art-html: default
-  art-pdf:
-    keep-tex: true
+#  art-pdf:
+#    keep-tex: true
+
+# LaTeX options
 #classoption: techreport,affiltop
 #twocolumn: false
 #fontsize: 11pt
 #biblio-style: alpha
+
+title: "Demo ART format to use as template"
+
 author:
   - name: John Doe
     affiliations:

@@ -61,6 +61,7 @@ contributes:
       # define default configuration for the html version of your format
       number-sections: true
       anchor-sections: true
+      html-math-method: katex
       toc: true
       toc-depth: 5
       linkcolor: "#AE3133"

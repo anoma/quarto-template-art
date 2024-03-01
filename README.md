@@ -2,7 +2,7 @@
 
 This is a [Quarto](https://quarto.org) template that assists you in creating a manuscript for [Anoma Research Topics](https://art.anoma.net).
 
-## Creating a New Article
+## Creating a new article
 
 You can use this as a template to create an article for an AFT journal. To do this, use the following command:
 
@@ -12,7 +12,7 @@ quarto use template anoma/quarto-template-art
 
 This will install the extension and create an example qmd file and bibiography that you can use as a starting place for your article.
 
-## Installation For Existing Document
+## Installation for existing document
 
 You may also use this format with an existing Quarto project or document.
 From the quarto project or document directory, run the following command to install this format:
@@ -21,7 +21,7 @@ From the quarto project or document directory, run the following command to inst
 quarto add anoma/quarto-template-art
 ```
 
-## Updating the Template
+## Updating the template
 
 After having installed the template using one of the methods above,
 you can update it to the latest version the following way:
@@ -32,33 +32,41 @@ quarto update anoma/quarto-template-art
 
 ## Usage
 
-To render the quarto project:
+Render the project (HTML only):
 
 ```bash
 quarto render
 ```
 
-To preview the quarto project:
+Render the project (HTML & PDF):
+
+```bash
+quarto render --profile pdf
+```
+
+Preview the project (HTML only):
 
 ```bash
 quarto preview
 ```
 
-To use a specific format, you can use the format names `art-pdf` and `art-html`. For example:
+Preview the project (HTML & PDF):
 
 ```bash
-quarto render article.qmd --to art-pdf
+quarto preview --profile pdf
 ```
 
-or in your document or `_quarto.yml`:
+To render a single file in a specific format, you can use the format names `art-pdf` and `art-html`:
 
-```yaml
-format:
-  pdf: default
-  aft-pdf:
-    keep-tex: true
+```bash
+quarto render index.qmd -t art-pdf
 ```
+
+The default project profile is defined in [`_quarto.yml`](_quarto.yml),
+while the additional options for the `pdf` profile are defined [`_quarto-pdf.yml`](_quarto-pdf.yml).
 
 ## Format Options
 
-This format does not have specific format option. Include documentation of such option otherwise. See <https://github.com/quarto-journals/elsevier#format-options> for an example.
+See an example in [`index.qmd`](index.qmd).
+
+The default options are defined in [`_extensions/anoma/art/_extension.yml`](_extensions/anoma/art/_extension.yml).

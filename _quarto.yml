@@ -7,8 +7,7 @@ project:
 
 format:
   art-html: default
-  art-pdf:
-    keep-tex: true
 
-pdf-engine: xelatex
+#pdf-engine: latexmk
+#pdf-engine: xelatex
 pdf-engine-opt: -shell-escape
