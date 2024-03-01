@@ -1,0 +1,14 @@
+project:
+  output-dir: _output
+  render:
+    - index.qmd
+  resources:
+    - sample-franklin.png
+
+format:
+  art-html: default
+  art-pdf:
+    keep-tex: true
+
+pdf-engine: xelatex
+pdf-engine-opt: -shell-escape
