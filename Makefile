@@ -29,9 +29,6 @@ dot: $(DOT_SVG)
 %.dot.svg: %.dot
 	neato -Tsvg $< > $@
 
-clean-output:
-	cd $(OUT); rm -f $(MD) $(QMD)
-
 clean-dot:
 	rm -f $(DOT_SVG)
 
