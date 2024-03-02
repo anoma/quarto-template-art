@@ -1,0 +1,11 @@
+project:
+  resources:
+    # Markdown includes for preview to detect changes
+    - intro.md
+    - model.md
+    - req.md
+    - related.md
+    - net.md
+    - sw.md
+    - conclusion.md
+    - future.md
