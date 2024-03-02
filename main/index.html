@@ -145,12 +145,12 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link active" data-scroll-target="#sec-intro"><span class="header-section-number">1</span> Introduction</a>
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link active" data-scroll-target="#sec-intro"><span class="header-section-number">1</span> Article Format Template</a>
   <ul>
   <li><a href="#about-quarto-extensions-formats-and-quarto-journals-article" id="toc-about-quarto-extensions-formats-and-quarto-journals-article" class="nav-link" data-scroll-target="#about-quarto-extensions-formats-and-quarto-journals-article"><span class="header-section-number">1.1</span> About Quarto Extensions formats And Quarto Journals Article</a></li>
   <li><a href="#structure-of-this-repository" id="toc-structure-of-this-repository" class="nav-link" data-scroll-target="#structure-of-this-repository"><span class="header-section-number">1.2</span> Structure of this repository</a>
   <ul>
-  <li><a href="#extensionsart" id="toc-extensionsart" class="nav-link" data-scroll-target="#extensionsart"><span class="header-section-number">1.2.1</span> <code>_extensions\art</code></a></li>
+  <li><a href="#extensionsaft" id="toc-extensionsaft" class="nav-link" data-scroll-target="#extensionsaft"><span class="header-section-number">1.2.1</span> <code>_extensions\aft</code></a></li>
   </ul></li>
   <li><a href="#checklist-creating-a-custom-format" id="toc-checklist-creating-a-custom-format" class="nav-link" data-scroll-target="#checklist-creating-a-custom-format"><span class="header-section-number">1.3</span> Checklist: Creating a custom format</a></li>
   <li><a href="#demo-of-some-features-found-in-this-demo-journal-template" id="toc-demo-of-some-features-found-in-this-demo-journal-template" class="nav-link" data-scroll-target="#demo-of-some-features-found-in-this-demo-journal-template"><span class="header-section-number">1.4</span> Demo of some features found in this demo journal template</a>
@@ -254,7 +254,7 @@ window.Quarto = {
     <div class="quarto-title-meta-heading">Doi</div>
     <div class="quarto-title-meta-contents">
       <p class="doi">
-        <a href="https://doi.org/XXXXXXX.YXXXXXX">XXXXXXX.YXXXXXX</a>
+        <a href="https://doi.org/XXXXXXX.YYYYYYY">XXXXXXX.YYYYYYY</a>
       </p>
     </div>
   </div>
@@ -278,8 +278,8 @@ window.Quarto = {
 
 
 <section id="sec-intro" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<p>This is a dummy example only for the purpose to use this repo as a template starter for creating new formats. For this <code>article-format-template</code> we call our dummy article <code>art</code>.</p>
+<h1 data-number="1"><span class="header-section-number">1</span> Article Format Template</h1>
+<p>This is a dummy example only for the purpose to use this repo as a template starter for creating new formats. For this <code>article-format-template</code> we call our dummy article <code>aft</code>.</p>
 <p>This quarto extension format supports PDF and HTML outputs. <code>quarto-journals</code> is aiming at porting existing <span class="math inline">\LaTeX</span> template from journals to be used with quarto. PDF format is what require the most work to fit the journals guideline, but Quarto offer a nice rendering for HTML output too. This demo format template only use basic HTML format without any customization for now.</p>
 <section id="about-quarto-extensions-formats-and-quarto-journals-article" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="about-quarto-extensions-formats-and-quarto-journals-article"><span class="header-section-number">1.1</span> About Quarto Extensions formats And Quarto Journals Article</h2>
@@ -294,12 +294,12 @@ window.Quarto = {
 <p>Everything for the extensions is in <code>_extensions</code>. See Quarto doc for details.</p>
 <ul>
 <li><p>In <code>partials</code>, you’ll find the <code>.tex</code> partials that can be used and should be removed or tweaked,s</p></li>
-<li><p>Your extension can make shortcodes and lua filters available. This document shows the effect of the one provided in the <code>art</code> format.</p></li>
-<li><p><code>art</code> format sets some defaults which are different from <code>pdf</code> or <code>html</code>, link setting links to URL in read inside PDF output.</p></li>
+<li><p>Your extension can make shortcodes and lua filters available. This document shows the effect of the one provided in the <code>aft</code> format.</p></li>
+<li><p><code>aft</code> format sets some defaults which are different from <code>pdf</code> or <code>html</code>, link setting links to URL in read inside PDF output.</p></li>
 </ul>
 <p>Source repository for this template format can found on <a href="https://github.com/quarto-journals/article-format-template">Github</a></p>
-<section id="extensionsart" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="extensionsart"><span class="header-section-number">1.2.1</span> <code>_extensions\art</code></h3>
+<section id="extensionsaft" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="extensionsaft"><span class="header-section-number">1.2.1</span> <code>_extensions\aft</code></h3>
 <p>In this folder you’ll find everything that defines the extensions which could be installed using <code>quarto install extension</code> or be part of the template when using <code>quarto use template</code></p>
 <dl>
 <dt>Format Metadata</dt>
@@ -345,7 +345,7 @@ This is in <code>_extension.yml</code> is where all the metadata about the forma
 <dt><code>template.qmd</code></dt>
 <dd>
 <p>This file is the template document that shows how to use the custom format. It will be downloaded with other resource by <code>quarto use template</code>, and even offered to be renamed if the name <code>template.qmd</code> is used.</p>
-<p>This file will usually use the custom format (here <code>art-pdf</code> and <code>art-html</code>) and show how to use the template. When you’ll copy this template, you should be able to render this document to the demo format.</p>
+<p>This file will usually use the custom format (here <code>aft-pdf</code> and <code>aft-html</code>) and show how to use the template. When you’ll copy this template, you should be able to render this document to the demo format.</p>
 <p><strong>Adapt this file to provide a suitable template for your custom format</strong></p>
 </dd>
 <dt>Other files</dt>
@@ -365,7 +365,7 @@ This is in <code>_extension.yml</code> is where all the metadata about the forma
 <li>Read the resources mentioned at the top,</li>
 <li>Use this template repo to create a new repository for your format (Click on “Use this template” to create new github repo)</li>
 <li>Once you are acquainted with the content, remove the resources that are there only as example (see above)</li>
-<li>Update README by replacing <code>art</code> and <code>Article Format Template</code> mentions for your journal format</li>
+<li>Update README by replacing <code>aft</code> and <code>Article Format Template</code> mentions for your journal format</li>
 <li>Keep only the template partials that you need to tweak, and add custom ones if needed</li>
 <li>Add any Lua filters for shortcodes and other that would be useful to create the expected output format</li>
 <li>Add any external resource your format will need, and that should be part of the extension format that will be downloaded,</li>
@@ -442,7 +442,7 @@ Number of Fisher Scoring iterations: 5</code></pre>
 <section id="using-references" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="using-references">Using references</h3>
 <p>I did not read this paper <span class="citation" data-cites="juvix-to-vampir">[<a href="#ref-juvix-to-vampir" role="doc-biblioref">Czaj23</a>]</span> but it must be interesting.</p>
-<p>Differences between <code>art-html</code> and <code>art-pdf</code>:</p>
+<p>Differences between <code>aft-html</code> and <code>aft-pdf</code>:</p>
 <ul>
 <li>For the HTML format, we are using Pandoc citeproc to include the bibliography. Here <code>reference-section-title</code> controls the title for the chapter that will be used.</li>
 <li>For the PDF format, <code>natbib</code> is used by default and the bibliography is included with a title by the LaTeX template.</li>
@@ -669,7 +669,7 @@ Figure&nbsp;1: 1907 Franklin Model D roadster. Photograph by Harris &amp; Ewing,
 <p>Your figures should contain a caption which describes the figure to the reader.</p>
 <p>Figure captions are placed <em>below</em> the figure.</p>
 <p>Here’s a page-width image:</p>
-<div id="fig-dresses" class="quarto-figure quarto-figure-center quarto-float anchored page-columns page-full" data-fig-env="figure*" alt="A woman and a girl in white dresses sit in an open car.">
+<div id="fig-dresses" class="quarto-figure quarto-figure-center quarto-float anchored page-columns page-full" alt="A woman and a girl in white dresses sit in an open car." data-fig-env="figure*">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-dresses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
 <img src="sample-franklin.png" class="img-fluid figure-img column-page" style="width:100.0%" data-fig-env="figure*" alt="A woman and a girl in white dresses sit in an open car.">
@@ -680,7 +680,7 @@ Figure&nbsp;2: 1907 Franklin Model D roadster. Photograph by Harris &amp; Ewing,
 </figure>
 </div>
 <p>Here’s a screen-width image:</p>
-<div id="fig-dresses" class="quarto-figure quarto-figure-center quarto-float anchored page-columns page-full" data-fig-env="figure*" alt="A woman and a girl in white dresses sit in an open car.">
+<div id="fig-dresses" class="quarto-figure quarto-figure-center quarto-float anchored page-columns page-full" alt="A woman and a girl in white dresses sit in an open car." data-fig-env="figure*">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-dresses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
 <img src="sample-franklin.png" class="img-fluid figure-img column-screen-inset" data-fig-env="figure*" alt="A woman and a girl in white dresses sit in an open car.">
@@ -784,14 +784,14 @@ Figure&nbsp;3: 1907 Franklin Model D roadster. Photograph by Harris &amp; Ewing,
   journal = {Journal of Data Science Software},
   date = {2024-02-29},
   url = {https://example.com/summarizing-output},
-  doi = {XXXXXXX.YXXXXXX},
+  doi = {XXXXXXX.YYYYYYY},
   langid = {en},
   abstract = {This document is only a demo explaining how to use the
     template.}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-doe2024" class="csl-entry quarto-appendix-citeas" role="listitem">
 <div class=""><span class="smallcaps">Doe, John</span> ;
-<span class="smallcaps">Friend, His</span>: <a href="https://doi.org/XXXXXXX.YXXXXXX">Demo ART format to use as
+<span class="smallcaps">Friend, His</span>: <a href="https://doi.org/XXXXXXX.YYYYYYY">Demo ART format to use as
 template</a>. In: <em>Journal of Data Science Software</em> (2024)</div>
 </div></div></section></div></main>
 <!-- /main column -->
